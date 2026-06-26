@@ -298,15 +298,15 @@ Fluffy pancakes served with fresh berries and maple syrup.
 
     <form id="reservationForm">
 
-        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="name" placeholder="Full Name" required min="1" max="20">
 
-        <input type="email" id="email" placeholder="Email Address">
+        <input type="email" id="email" placeholder="Email Address" required min="1" max="20">
 
-        <input type="date" id="date">
+        <input type="date" id="date"required min="1" max="20">
 
-        <input type="time" id="time">
+        <input type="time" id="time"required min="1" max="20">
 
-        <input type="number" id="guests" placeholder="Number of Guests">
+        <input type="number" id="guests" placeholder="Number of Guests"required min="1" max="20">
 
         <button type="submit">Reserve Now</button>
 
