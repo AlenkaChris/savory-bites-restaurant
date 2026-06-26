@@ -148,3 +148,41 @@ setInterval(()=>{
     showSlide(current);
 
 },5000);
+
+// Reservation Form
+
+const form = document.getElementById("reservationForm");
+
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+
+    const email = document.getElementById("email").value.trim();
+
+    const date = document.getElementById("date").value;
+
+    const time = document.getElementById("time").value;
+
+    const guests = document.getElementById("guests").value;
+
+    if(name==="" || email==="" || date==="" || time==="" || guests===""){
+
+        message.style.color="tomato";
+
+        message.textContent="Please fill in all fields.";
+
+        return;
+
+    }
+
+    message.style.color="#d4af37";
+
+    message.textContent="✅ Reservation request received! We'll contact you shortly.";
+
+    form.reset();
+
+});
